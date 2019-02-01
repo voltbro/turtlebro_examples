@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="turtlebro_examples" type="ball_tracking.py" name="demo_ball_tracking" output="log" respawn="false"/>
+</launch>
