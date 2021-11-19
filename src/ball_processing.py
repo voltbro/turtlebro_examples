@@ -15,8 +15,8 @@ class BallProcessing:
         # self.greenUpper = (34, 255, 240) # light
         # self.greenLower = (14, 130, 150)# dark
         # self.greenUpper = (34, 255, 240) # light
-        self.greenLower = (14, 180, 200)# dark
-        self.greenUpper = (34, 255, 255) # light
+        self.yellowLower = (14, 180, 200)# dark
+        self.yellowUpper = (34, 255, 255) # light
 
         self.font                   = cv2.FONT_HERSHEY_SIMPLEX
         self.bottomLeftCornerOfText = (30,50)
@@ -34,7 +34,7 @@ class BallProcessing:
         # construct a mask for the color "green", then perform
         # a series of dilations and erosions to remove any small
         # blobs left in the mask
-        mask = cv2.inRange(hsv, self.greenLower, self.greenUpper)
+        mask = cv2.inRange(hsv, self.yellowLower, self.yellowUpper)
 
         # cv2.imshow("Frame2", mask)
         mask = cv2.erode(mask, None, iterations=2)
